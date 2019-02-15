@@ -17,8 +17,8 @@ class App extends Component {
 
   address() {
     const { maker } = this.state;
-
     if (maker) {
+      console.log(maker.service('smartContract').getContract('OTC_PROXY'));
       return maker.currentAddress();
     }
     return 'Connecting...';
