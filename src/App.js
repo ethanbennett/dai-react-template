@@ -1,23 +1,44 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import createMaker from './eth/maker';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  async componentWillMount() {
+    const maker = await createMaker();
+    await maker.authenticate();
+    this.setState({ maker: maker });
+  }
+
+  address() {
+    const { maker } = this.state;
+
+    if (maker) {
+      return maker.currentAddress();
+    }
+    return 'Connecting...';
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            {`Current address: ${this.address()}`}
           </p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://makerdao.com/documentation"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Dai.js docs
           </a>
         </header>
       </div>
