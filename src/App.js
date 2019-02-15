@@ -18,13 +18,26 @@ class App extends Component {
   address() {
     const { maker } = this.state;
     if (maker) {
-      console.log(maker.service('smartContract').getContract('OTC_PROXY'));
       return maker.currentAddress();
     }
     return 'Connecting...';
   }
 
+  buyDai() {
+    const { maker } = this.state;
+    if (maker) {
+      try {
+        maker.service('buyDai').buyDai(1).then(() => {
+          alert('tx mined!!!!!!!!');
+        })
+      } catch (err) {
+        alert(err.message);
+      }
+    }
+  }
+
   render() {
+    console.log(this.state.amount);
     return (
       <div className="App">
         <header className="App-header">
@@ -32,6 +45,16 @@ class App extends Component {
           <p>
             {`Current address: ${this.address()}`}
           </p>
+          <input
+            type='number'
+            onChange={amount => this.setState({ amount: amount.target.value })}
+          ></input>
+          <button
+            onClick={() => this.buyDai()}
+          >
+            Buy Dai
+          </button>
+          <br />
           <a
             className="App-link"
             href="https://makerdao.com/documentation"
