@@ -16,7 +16,9 @@ const config = {
       ...config,
       additionalServices: ['buyDai'],
       buyDai: [BuyDaiService],
-      smartContract: { contracts }
+      smartContract: {
+        addContracts: contracts
+      }
     }
   }
 }
