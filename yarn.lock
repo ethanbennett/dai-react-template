@@ -1255,8 +1255,9 @@ async-eventemitter@^0.2.2:
   dependencies:
     async "^2.4.0"
 
-"async-eventemitter@github:ahultgren/async-eventemitter#fa06e39e56786ba541c180061dbf2c0a5bbf951c":
+async-eventemitter@ahultgren/async-eventemitter#fa06e39e56786ba541c180061dbf2c0a5bbf951c:
   version "0.2.3"
+  uid fa06e39e56786ba541c180061dbf2c0a5bbf951c
   resolved "https://codeload.github.com/ahultgren/async-eventemitter/tar.gz/fa06e39e56786ba541c180061dbf2c0a5bbf951c"
   dependencies:
     async "^2.4.0"
@@ -6253,8 +6254,8 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
 
 lodash.merge@^4.6.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
@@ -10198,8 +10199,9 @@ web3-provider-engine@^13.3.2:
     xhr "^2.2.0"
     xtend "^4.0.1"
 
-"web3-provider-engine@github:makerdao/provider-engine#kovan-fix-dist":
+web3-provider-engine@makerdao/provider-engine#kovan-fix-dist:
   version "14.0.4"
+  uid "7c4b187809f156409473246de15dc595e1fe3356"
   resolved "https://codeload.github.com/makerdao/provider-engine/tar.gz/7c4b187809f156409473246de15dc595e1fe3356"
   dependencies:
     async "^2.5.0"
